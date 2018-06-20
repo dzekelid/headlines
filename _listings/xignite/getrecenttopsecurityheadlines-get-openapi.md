@@ -1,0 +1,190 @@
+---
+swagger: "2.0"
+x-collection-name: Xignite
+x-complete: 0
+info:
+  title: Xignite Global News Get Recent Top Security Headlines
+  description: Returns 14 days specified number of headlines for a given security.
+  version: 1.0.0
+host: globalnews.xignite.com
+basePath: xGlobalNews.xml/
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /GetTodaysMarketHeadlines:
+    get:
+      summary: Get Todays Market Headlines
+      description: Returns all market headlines that were published today.
+      operationId: GetTodaysMarketHeadlines
+      x-api-path-slug: gettodaysmarketheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Todays
+      - Market
+      - Headlines
+  /GetTopSecurityHeadlines:
+    get:
+      summary: Get Top Security Headlines
+      description: Returns the most recent specified number of headlines for a given
+        security.
+      operationId: GetTopSecurityHeadlines
+      x-api-path-slug: gettopsecurityheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Security
+      - Headlines
+  /GetTopMarketHeadlines:
+    get:
+      summary: Get Top Market Headlines
+      description: Returns the most recent specified number of market headlines.
+      operationId: GetTopMarketHeadlines
+      x-api-path-slug: gettopmarketheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Market
+      - Headlines
+  /GetHistoricalSecurityHeadlines:
+    get:
+      summary: Get Historical Security Headlines
+      description: Returns all headlines that were published in a specified time frame
+        for a given security.
+      operationId: GetHistoricalSecurityHeadlines
+      x-api-path-slug: gethistoricalsecurityheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Historical
+      - Security
+      - Headlines
+  /GetTopMarketHeadlinesBySector:
+    get:
+      summary: Get Top Market Headlines By Sector
+      description: Returns the most recent specified number of market headlines associated
+        with a specified sector.
+      operationId: GetTopMarketHeadlinesBySector
+      x-api-path-slug: gettopmarketheadlinesbysector-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Top
+      - Market
+      - Headlines
+      - Sector
+  /GetTodaysMarketHeadlinesBySector:
+    get:
+      summary: Get Todays Market Headlines By Sector
+      description: Returns all market headlines that were published today for a specified
+        sector.
+      operationId: GetTodaysMarketHeadlinesBySector
+      x-api-path-slug: gettodaysmarketheadlinesbysector-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Todays
+      - Market
+      - Headlines
+      - Sector
+  /GetTodaysSecurityHeadlines:
+    get:
+      summary: Get Todays Security Headlines
+      description: Returns all headlines that were published today for a given security.
+      operationId: GetTodaysSecurityHeadlines
+      x-api-path-slug: gettodayssecurityheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Todays
+      - Security
+      - Headlines
+  /GetRecentTopSecurityHeadlines:
+    get:
+      summary: Get Recent Top Security Headlines
+      description: Returns 14 days specified number of headlines for a given security.
+      operationId: GetRecentTopSecurityHeadlines
+      x-api-path-slug: getrecenttopsecurityheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Recent
+      - Top
+      - Security
+      - Headlines
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

@@ -34,6 +34,44 @@ paths:
       - Top
       - Industry
       - Headlines
+  /GetTodaysIndustryHeadlines:
+    get:
+      summary: Get Todays Industry Headlines
+      description: Return press releases for today for an industry.
+      operationId: postGettodaysindustryheadlines
+      x-api-path-slug: gettodaysindustryheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Todays
+      - Industry
+      - Headlines
+  /GetLastIndustryHeadlines:
+    get:
+      summary: Get Last Industry Headlines
+      description: Return the last press releases since a certain time for an industry.
+      operationId: postGetlastindustryheadlines
+      x-api-path-slug: getlastindustryheadlines-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Last
+      - Industry
+      - Headlines
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
